@@ -1,0 +1,35 @@
+package lesson8;
+
+import java.util.Scanner;
+
+public class SelectionSorting_int {
+    public static void main(String[] args) {
+
+        int [] emptyArray = new int[15];
+
+        for (int h = 0; h < emptyArray.length; h++) {
+            System.out.println("\nenter a number ");
+            Scanner scanner = new Scanner(System.in);
+            emptyArray [h] = scanner.nextInt();
+
+            for (int i = 0; i < h + 1; i++) {
+                for (int j = 0; j < h - i; j++) {  // we will decrease the number of iterations with every loop
+                    // the condition has to be numbers.length - i - 1
+
+
+                    if (emptyArray[j] > emptyArray[j + 1]) { // we need to check if numbers[j] is greater than the next adjacent element before swapping
+
+                        int hold = emptyArray[j]; // create a variable to hold the value
+                        emptyArray[j] = emptyArray[j + 1]; // we assign a new value in the desired order
+                        emptyArray[j + 1] = hold; // we swapped the value.
+
+                    }
+
+                }
+            }
+
+            for (int print : emptyArray) {
+                System.out.print(print + "  ");
+
+            }
+        }
