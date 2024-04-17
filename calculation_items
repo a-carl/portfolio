@@ -1,0 +1,80 @@
+
+package lesson21.Homework;
+// Create class Item with fields name, price, and quantity.
+// Create constructor with all parameters, getters and setters.
+// In the Main class create a shopping list to store items.
+// Implement method which takes list of items to
+// calculate the total price (sum of prices multiplied by quantity).
+
+
+
+
+
+public class Item {
+    private String name;
+    private double price;
+    private int quantity;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Item (String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+}
+
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Item> shoppingList = new ArrayList<>();
+
+        shoppingList.add(new Item("apple", 2.123, 7));
+        shoppingList.add(new Item("watermelon", 1.912, 3));
+        shoppingList.add(new Item("cif", 2.118, 5));
+        shoppingList.add(new Item("toilet paper", 7.536, 7));
+        shoppingList.add(new Item("oat milk", 8.213, 9));
+
+        System.out.println("The total price of the items is: " + totalPrice(shoppingList));
+    }
+
+    public static double totalPrice (ArrayList <Item> shoppingItems) {
+        double totalPrice = 0;
+        int totalItems = 0;
+
+        for (Item s : shoppingItems) {
+            totalPrice += s.getPrice();
+        }
+
+        for (Item t : shoppingItems) {
+            totalItems += t.getQuantity();
+        }
+        return totalItems * totalPrice;
+    }
+}
