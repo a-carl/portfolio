@@ -1,5 +1,6 @@
 
 package lesson21.Homework;
+// Task Breakdown:
 // Create class Item with fields name, price, and quantity.
 // Create constructor with all parameters, getters and setters.
 // In the Main class create a shopping list to store items.
