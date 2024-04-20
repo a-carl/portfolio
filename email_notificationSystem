@@ -1,0 +1,48 @@
+public class EmailNotificationSystem {
+    public static void main(String[] args) {
+
+        LinkedList<String> emailNot = new LinkedList<>();
+
+        emailNot.offer("Meeting Reminder: Don't forget our team meeting tomorrow.");
+        emailNot.offer("Payment Confirmation: Your recent transaction has been processed.");
+        emailNot.offer("Subscription Renewal: Your subscription will expire in 3 days.");
+        emailNot.offer("New Product Launch: Check out our website");
+
+        System.out.println("Current queue status is: " + emailNot.size() + " notifications");
+        for (String printNot : emailNot) {
+            System.out.println(printNot);
+        }
+
+        System.out.println("\nThe next notification to be removed is: " + emailNot.peek());
+        emailNot.poll();
+
+        System.out.println("Current queue status is: " + emailNot.size() + " notifications");
+        for (String printNot : emailNot) {
+            System.out.println(printNot);
+        }
+
+        System.out.println("\nThe next notification to be removed is: " + emailNot.peek());
+        emailNot.poll();
+
+        System.out.println("Current queue status is: " + emailNot.size() + " notifications");
+        for (String printNot : emailNot) {
+            System.out.println(printNot);
+        }
+
+        System.out.println("\nThe next notification to be removed is: " + emailNot.peek());
+        emailNot.poll();
+
+        System.out.println("Current queue status is: " + emailNot.size() + " notifications");
+        for (String printNot : emailNot) {
+            System.out.println(printNot);
+        }
+
+        System.out.println("\nThe next notification to be removed is: " + emailNot.peek());
+        emailNot.poll();
+
+        System.out.println("Current queue status is: " + emailNot.size() + " notifications");
+        for (String printNot : emailNot) {
+            System.out.println(printNot);
+        }
+    }
+}
