@@ -1,0 +1,47 @@
+public class ProductInventory {
+    
+    static Map <String, Integer> productInventory = new HashMap<>();
+
+    public static void main(String[] args) {
+
+        productInventory.put("Laptops ", 10);
+        productInventory.put("Monitors ", 23);
+        productInventory.put("keyboards ", 1823);
+        productInventory.put("Mice ", 1023);
+        productInventory.put("Tablets ", 89);
+        productInventory.put("SmartPhones ", 23);
+        productInventory.put("Mouses ", 21832);
+        productInventory.put("Microphones ", 728);
+
+        System.out.println("The current list is: " + "\n" + productInventory + "\nThe size is: " + productInventory.size() + " different item's type");
+
+        addNew("Cameras ", 12);
+        addNew("Cables ", 67);
+        addNew("Notebooks ", 12);
+
+        System.out.println("\nThe current list after addition is: " + "\n" + productInventory + "\nThe new size is: " + productInventory.size() + " different item's type");
+
+        update("PowerBank ", 34);
+
+        System.out.println("\nThe current list after update is: " + "\n" + productInventory + "\nThe new size is: " + productInventory.size() + " different item's type");
+
+        remove("Monitors ", 23);
+        remove("SmartPhones ", 23);
+        remove("Microphones ", 728);
+
+        System.out.println("\nThe current list after Black Friday is: " + "\n" + productInventory + "\nThe new size is: " + productInventory.size() + " different item's type");
+
+    }
+
+    public static void addNew (String product, int quantity) {
+        productInventory.put(product, quantity);
+    }
+
+    public static Boolean update (String product, int quantity) {
+        return productInventory.put(product, quantity) != null;
+    }
+
+    public static void remove (String product, int quantity) {
+        productInventory.remove(product);
+    }
+}
